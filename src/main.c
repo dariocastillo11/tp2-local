@@ -935,20 +935,10 @@ int main(int argc, char* argv[], char** envp)
         memset(line, '\0', MAXLINE);
 
         // Imprimir el prompt si no hay necesidad de reimpresión
-        if (no_reprint_prmpt == 0)
-        {
-            shellPrompt();
-        }
 
+        shellPrompt();
 
-
-        // Imprimir el prompt si no hay archivo abierto
-        if (!fp) {
-            shellPrompt();
-        }
         // Vaciado de la línea y captura del ingreso del usuario
-
-
         // Lee desde el archivo si está abierto, o desde stdin si no
         if (fp)
         {
